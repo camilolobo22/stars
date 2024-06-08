@@ -1,0 +1,357 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+:root{
+    --color-1:#222831;
+    --color-2:#393E46;
+    --color-3:#D65A31;
+    --color-2:#EEEEEE;
+}
+
+body{
+    width: 100%;
+}
+
+nav{
+    background: #D65A31;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 2px 50px;
+}
+.logo{
+    height: 75px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #222831;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #EEEEEE;
+    transition: .9s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.seccion-formulario{
+    background-image: url(../img/register.jpg);
+    background-size: cover;
+    background-position: right;
+    width: auto;
+    height: 1100px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    width: 400px;
+    background: #242322;
+    padding: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 14px 37px #242322;
+}
+
+#texto-nombre,#texto-apellido,#texto-email,#texto-telefono, #texto-contraseña,#texto-usuario{
+    width: 100%;
+    background-color: #242322;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-size: 13px;
+    color: aliceblue;
+}
+
+#Mensaje{
+    width: 100%;
+    height: 100px;
+    background-color: #242322;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid white;
+    font-size: 13px;
+    color: aliceblue;
+}
+
+.formulario p{
+    margin-top: 10px;
+}
+
+.formulario fieldset{
+    padding: 10px;
+    border: none;
+    padding: 5px;
+}
+
+.formulario legend{
+    color:var(--color-2);
+    border-bottom: 1px solid var(--color-3);
+    margin-bottom: 4px;
+}
+
+.formulario textarea{
+    resize: none;
+}
+
+.container-subir{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container-subir a{
+    display: block;
+    text-decoration: none;
+    color: var(--color-2);
+    background: var(--color-3);
+    width: 75px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.container-subir a:hover{
+    background: var(--color-1);
+    color: var(--color-3);
+}
+
+.texto-mensaje, .textos{
+    color:var(--color-2)
+}
+
+
+.texto-final a{
+    text-decoration: none;
+    color:var(--color-3);
+}
+
+.texto-volver a{
+    text-decoration: none;
+    color:var(--color-3);
+}
+
+.texto-volver{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.sexo-formulario, .tipo-contacto{
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.sexo-formulario h4, .tipo-contacto h4{
+    color: var(--color-3);
+    padding-right: 5px;
+}
+
+#sexo-hombre, #sexo-mujer, #tipo-curso, #tipo-pintura, #tipo-otro{
+    margin-left: 5px;
+}
+
+
+.sexo-formulario label, .tipo-contacto label{
+    padding-left: 5px;
+}
+
+.sexo-formulario input, .tipo-contacto input{
+    padding-left: 5px;
+}
+
+.texto-final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.boton-enviar{
+    width: 100%;
+    background-color: var(--color-3);
+    border: none;
+    padding: 8px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.formulario h3{
+    font-size: 25px;
+    font-style: initial;
+    color:var(--color-3);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+footer{
+    background-color: var(--color-3);
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+}
+
+.listas-footer {
+    display: flex;
+}
+
+.listas-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lista1,#lista2,#lista3,#lista4,#lista5{
+    padding: 10px;
+}
+
+.listas-footer a{
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.final{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.final h6{
+    padding: 13px;
+    color: var(--color-1);
+}
+
+@media (max-width: 1200px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1040px){
+    #primeraimagen{
+        position:static;
+    }
+    .checkbtn{
+        display:inline-flex;
+    }
+    ul{
+        position: fixed;
+        width: 20%;
+        height: 700px;
+        background: var(--color-3);
+        top: 80px;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: var(--color-2);
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+@media (max-width: 1650px){
+    #primeraimagen .texto2-promocion{
+        font-size: 65px;
+    }
+    #primeraimagen .texto3-promocion{
+        font-size: 20px;
+    }
+    .pinturas a {
+        font-size: 20px;
+        padding: 10px 70px;
+    }
+}
+
+@media (max-width: 1300px){
+    #primeraimagen .texto1-promocion{
+        font-size: 23px;
+    }
+    #primeraimagen .texto2-promocion{
+        font-size: 53px;
+    }
+    #primeraimagen .texto3-promocion{
+        font-size: 18px;
+    }
+    .pinturas a {
+        padding: 10px 21px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1058px){
+    #primeraimagen .texto1-promocion{
+        font-size: 20px;
+    }
+    #primeraimagen .texto2-promocion{
+        font-size: 48px;
+    }
+    #primeraimagen .texto3-promocion{
+        font-size: 15px;
+    }
+}

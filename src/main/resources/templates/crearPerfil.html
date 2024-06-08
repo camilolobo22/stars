@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Perfil</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/cursos.css}" />
+</head>
+<body>
+    <h1>Crear Nuevo Perfil</h1>
+    <form action="#" th:action="@{/perfil/web/crear}" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" />
+        </div>
+        <div>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" />
+        </div>
+        <div>
+            <label for="correo">Correo Electronico:</label>
+            <input type="email" id="correo" name="correo" />
+        </div>
+        <div>
+            <label for="nombreUsuario">Nombre de Usuario:</label>
+            <input type="text" id="nombre" name="nombre" />
+        </div>
+        <div>
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" />
+        </div>
+        <!-- Agrega más campos según los atributos de tu entidad Curso -->
+        <div>
+            <button type="submit">Guardar</button>
+            <button type="button" th:onclick="|location.href='@{/perfil/web/listar}'|">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>

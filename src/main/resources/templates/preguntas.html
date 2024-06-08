@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8"/>
+    <TITLE>Inicio - Portal de Arte - Programación Web</TITLE>
+    <link rel="stylesheet" href="../styles/preguntas.css">
+    <link rel="icon" href="../icons/inicio.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animista/1.0.1/animista.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">
+        <link rel="stylesheet" type="text/css" href="/styles/preguntas.css">
+    
+</head>
+<body>
+    <nav id="barra-menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img src= "../svg/bars-solid.svg" height="20px">
+        </label>
+        
+            <img src="../img/logo.PNG" alt="" class="logo">
+        
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./pages/catalogo.html">Catálogo</a></li>
+            <li><a href="../pages/pagos.html">Pagos</a></li>
+            <li><a class="active" href="../pages/preguntas.html">Preguntas</a></li>
+            <li><a href="../pages/privacidad.html">Privacidad</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li><a href="../pages/login.html">Portal</a></li>
+          </ul>
+        <!-- los elementos del menu seran enlaces a algun sitio web externo de supermercados o en este caso a un sitio web de pintura-->
+    </nav>
+    <main>
+
+    
+    <h1 class="titulo">Preguntas Frecuentes</h1>
+		<div class="categorias" id="categorias">
+			<div class="categoria activa" data-categoria="metodos-pago">
+				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M21.19 7h2.81v15h-21v-5h-2.81v-15h21v5zm1.81 1h-19v13h19v-13zm-9.5 1c3.036 0 5.5 2.464 5.5 5.5s-2.464 5.5-5.5 5.5-5.5-2.464-5.5-5.5 2.464-5.5 5.5-5.5zm0 1c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5-4.5-2.016-4.5-4.5 2.016-4.5 4.5-4.5zm.5 8h-1v-.804c-.767-.16-1.478-.689-1.478-1.704h1.022c0 .591.326.886.978.886.817 0 1.327-.915-.167-1.439-.768-.27-1.68-.676-1.68-1.693 0-.796.573-1.297 1.325-1.448v-.798h1v.806c.704.161 1.313.673 1.313 1.598h-1.018c0-.788-.727-.776-.815-.776-.55 0-.787.291-.787.622 0 .247.134.497.957.768 1.056.344 1.663.845 1.663 1.746 0 .651-.376 1.288-1.313 1.448v.788zm6.19-11v-4h-19v13h1.81v-9h17.19z"/></svg>
+				<p>Métodos de pago</p>
+			</div>
+			<div class="categoria" data-categoria="entregas">
+				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M7 24h-5v-9h5v1.735c.638-.198 1.322-.495 1.765-.689.642-.28 1.259-.417 1.887-.417 1.214 0 2.205.499 4.303 1.205.64.214 1.076.716 1.175 1.306 1.124-.863 2.92-2.257 2.937-2.27.357-.284.773-.434 1.2-.434.952 0 1.751.763 1.751 1.708 0 .49-.219.977-.627 1.356-1.378 1.28-2.445 2.233-3.387 3.074-.56.501-1.066.952-1.548 1.393-.749.687-1.518 1.006-2.421 1.006-.405 0-.832-.065-1.308-.2-2.773-.783-4.484-1.036-5.727-1.105v1.332zm-1-8h-3v7h3v-7zm1 5.664c2.092.118 4.405.696 5.999 1.147.817.231 1.761.354 2.782-.581 1.279-1.172 2.722-2.413 4.929-4.463.824-.765-.178-1.783-1.022-1.113 0 0-2.961 2.299-3.689 2.843-.379.285-.695.519-1.148.519-.107 0-.223-.013-.349-.042-.655-.151-1.883-.425-2.755-.701-.575-.183-.371-.993.268-.858.447.093 1.594.35 2.201.52 1.017.281 1.276-.867.422-1.152-.562-.19-.537-.198-1.889-.665-1.301-.451-2.214-.753-3.585-.156-.639.278-1.432.616-2.164.814v3.888zm3.79-19.913l3.21-1.751 7 3.86v7.677l-7 3.735-7-3.735v-7.719l3.784-2.064.002-.005.004.002zm2.71 6.015l-5.5-2.864v6.035l5.5 2.935v-6.106zm1 .001v6.105l5.5-2.935v-6l-5.5 2.83zm1.77-2.035l-5.47-2.848-2.202 1.202 5.404 2.813 2.268-1.167zm-4.412-3.425l5.501 2.864 2.042-1.051-5.404-2.979-2.139 1.166z"/></svg>
+				<p>Entregas</p>
+			</div>
+			<div class="categoria" data-categoria="seguridad">
+				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-3.371 2.866-5.484 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm0 1.292c2.942 2.31 5.12 2.655 8 2.701v10.542c0 3.891-2.638 4.943-8 8.284-5.375-3.35-8-4.414-8-8.284v-10.542c2.88-.046 5.058-.391 8-2.701zm5 7.739l-5.992 6.623-3.672-3.931.701-.683 3.008 3.184 5.227-5.878.728.685z"/></svg>
+				<p>Seguridad</p>
+			</div>
+			<div class="categoria" data-categoria="cuenta">
+				<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M9.484 15.696l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm0-5l-.711-.696-2.552 2.607-1.539-1.452-.698.709 2.25 2.136 3.25-3.304zm10.516 11.304h-8v1h8v-1zm0-5h-8v1h8v-1zm0-5h-8v1h8v-1zm4-5h-24v20h24v-20zm-1 19h-22v-18h22v18z"/></svg>
+				<p>Cuenta</p>
+			</div>
+		</div>
+
+		<div class="preguntas">
+
+			<!-- Preguntas Metodos de pago -->
+			<div class="contenedor-preguntas activo" data-categoria="metodos-pago">
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Cuáles son las formas de pago que aceptan? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Aceptamos metodos de pago como Bancolombia a la Mano, Nequi y Daviplata. Aunque actualmente estamos trabajando para que puedas pagar con PSE y otros canales.</p>
+				</div>
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Manejan Plan de pagos? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Por el momento el plan de pago no esta disponible, pero no descartamos la posibilidad de tener un intermediario como Sistecredito para esta labor.</p>
+				</div>
+                <div class="contenedor-pregunta">
+					<p class="pregunta">¿Cuál es el costo de los cursos? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Depende mucho de la temporada y pueden variar, revisa <a href="../pages/catalogo.html">nuestro catalogo</a> y encontras los valores como promociones y demás.</p>
+				</div>
+			</div>
+
+			<!-- Preguntas Entregas -->
+			<div class="contenedor-preguntas" data-categoria="entregas">
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Tienen entregas a domicilio? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Contamos con entregas a domicilio en toda colombia gracias a Servientrega.</p>
+				</div>
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿En cuanto sale el envio a mi lugar de residencia? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Depende mucho de la distancia de nuestra sucursal al destino, pero puedes revisar y comparar en Servientrega la distancia y el peso de producto para su zona. Así tiene un precio más exacto.</p>
+				</div>
+                <div class="contenedor-pregunta">
+					<p class="pregunta">¿Cuánto tiempo tardará mi pedido en llegar? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">El tiempo puede ser considerable a la distancia de nuestra sucursal. Puedes revisar en Servientrega el tiempo estimado para tu ciudad o municipio, sin embargo ten encuenta los problemas durante estos envios que retrasan su entrega.</p>
+				</div>
+                <div class="contenedor-pregunta">
+					<p class="pregunta">¿Ofrecen envío internacional? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">No, por el momento solo ofrecemos nuestros servicios a Toda Colombia, pero no descargamos una expansión proximamente.</p>
+				</div>
+                <div class="contenedor-pregunta">
+					<p class="pregunta">¿Qué tipo de materiales se incluyen en los kits de pintura? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">En el kit cuenta con cosas basicas como lienzo, pinturas de 7 colores diferentes y variados, espatula y un kit de 5 pinceles, también cuenta con dos tarros de 400ml de Trimentina y Aceite de Linaza.</p>
+				</div>
+			</div>
+
+			<!-- Preguntas Seguridad -->
+			<div class="contenedor-preguntas" data-categoria="seguridad">
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Como puedo saber si son confiables? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Gracias a nuestras experiencias con otros usarios, que encontrara en <a href="../index.html">Inicio</a>. Somos un emprendimiento Santandereano con 5 años de experiencia.</p>
+				</div>
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Que pasa con mis datos personales? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Los datos personales son tratados según la ley de Colombia. Para saber más acerca de nuestro tratamiento de privacidad, visite <a href="../pages/privacidad.html">Politica de Privacidad.</a></p>
+				</div>
+                <div class="contenedor-pregunta">
+					<p class="pregunta">¿Cuál es la política de devoluciones y cambios? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Contamos con una restauración por tiempo de compra que tiene un costo minimo de 40.000 para cualquier cuadro, incluye todo lo relacionado a su pintura. La devoluciones son inexistentes ya que el producto esta publicado en la página tal cuál se envía, para un cambio es necesario un pago minimo de 30.000 pesos, y en 15 días habiles se le devolvera el dinero, siempre y cuando llegue la pintura en perfectas condiciones de acuerdo a lo pactado.</p>
+				</div>                
+			</div>
+
+			<!-- Preguntas Cuenta -->
+			<div class="contenedor-preguntas" data-categoria="cuenta">
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Como puedo acceder a mis pedidos? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Iniciando sesión en el portal - <a href="../pages/login.html">Inicio</a>, es necesario tener una cuenta para poder visualizar funciones escenciales, Puede crear su cuenta en <a href="../pages/register.html">Registrar</a>, si no cuenta con una cuenta previamente creada.</p>
+				</div>
+				<div class="contenedor-pregunta">
+					<p class="pregunta">¿Como puedo cambiar mi contraseña? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Es necesario que envie una solicitud dentro de portal, iniciando sesión en <a href="../pages/login.html">Inicio</a> dentro podra buscar la opción especificada de cambiar contraseña.</p>
+				</div>
+                <div class="contenedor-pregunta">
+					<p class="pregunta">¿Cómo puedo borrar mi cuenta permanentemente? <img src="../svg/suma.svg" alt="Abrir Respuesta" /></p>
+					<p class="respuesta">Para ello es necesario que contacte con nosotros mediante algun medio de <a href="../pages/contacto.html">Contacto</a> verificando su identidad mediante el Email registrado, verificando la solicitud y listo.</p>
+				</div>
+			</div>
+
+
+
+
+		</div>
+    </main>
+    <footer>
+        <div class="container-subir">
+        <a href="#barra-menu" class="btn-mas">⬆</a></div>
+
+        <div class="listas-footer">
+            <div id="lista1" class="footer-logo">
+                <ul>
+                    <li><img src="../img/logo.PNG" alt="" class="logo"></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista2" class="footer-secciones">
+                <h2><label>Secciones</label></h2>
+                <ul>
+                    <li><a href="../index.html" class="footer-enlace">Inicio</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Catalogo</a></li>
+                    <li><a href="../pages/pagos.html" class="footer-enlace">Pagos</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista3" class="footer-pinturas">
+                <h2><label>Pinturas</label></h2>
+                <ul>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Ultimas Pinturas</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Creaciones del Taller</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Ver todas</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista4" class="footer-nosotros">
+                <h2><label>Nosotros</label></h2>
+                <ul>
+                    <li><a href="../pages/preguntas.html" class="footer-enlace">Preguntas Frecuentes</a></li>
+                    <li><a href="../pages/privacidad.html" class="footer-enlace">Política de Privacidad</a></li>
+                    <li><a href="../pages/contacto.html" class="footer-enlace">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div id="lista5" class="footer-siganos">
+            </div>
+        </div>
+        <hr>
+        <div class="final">
+            <h6>© 2023 Stars - Tienda y escuela de arte. Todos los derechos reservados. | Este es sitio es una creación de Marlon Calderón.</h4>
+            <h6><a href="../pages/privacidad.html">Política de Privacidad</a></h4>
+            <h6><a href="../pages/preguntas.html">Preguntas Frecuentes</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4276">Ley 527 de 1999</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44306">Ley 1480 de 2011</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">Ley 1581 de 2012</a></h4>
+        </div> 
+</footer>
+
+    <script src="../javascript/categorias.js"></script>
+	<script src="../javascript/preguntasFrecuentes.js"></script>
+</body>
+</html>

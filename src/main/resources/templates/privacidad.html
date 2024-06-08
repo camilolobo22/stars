@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8"/>
+    <TITLE>Inicio - Portal de Arte - Programación Web</TITLE>
+    <link rel="stylesheet" href="../styles/privacidad.css">
+    <link rel="icon" href="../icons/inicio.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animista/1.0.1/animista.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">
+    <style>
+    header{
+    background-image: url("../img/portal.png");
+    background-position:center;
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+:root{
+    --color-1:#222831;
+    --color-2:#393E46;
+    --color-3:#D65A31;
+    --color-2:#EEEEEE;
+}
+
+body{
+    width: 100%;
+}
+
+nav{
+    background: #D65A31;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 2px 50px;
+}
+.logo{
+    height: 75px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #222831;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #EEEEEE;
+    transition: .9s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.container-subir{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container-subir a{
+    display: block;
+    text-decoration: none;
+    color: var(--color-2);
+    background: var(--color-3);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.container-subir a:hover{
+    background: var(--color-1);
+    color: var(--color-3);
+}
+
+
+footer{
+    background-color: var(--color-3);
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+}
+
+.listas-footer {
+    display: flex;
+}
+
+.listas-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lista1,#lista2,#lista3,#lista4,#lista5{
+    padding: 10px;
+}
+
+.listas-footer a{
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.final{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.final a{
+    color: var(--color-1);
+}
+
+.final a:hover{
+    background: var(--color-2);
+    color: var(--color-1);
+}
+
+.final h6{
+    padding: 13px;
+    color: var(--color-1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  p {
+    font-size: 20px;
+    margin: 0 0 20px;
+  }
+
+  /* Estilos del subtítulo */
+h2 {
+    padding-bottom: 10px;
+    color: var(--color-3);
+    margin-top: 0;
+    font-size: 27px;
+  }
+
+
+  .contenido-privacidad{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+    </style>
+</head>
+<body>
+    <nav id="barra-menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img src= "../svg/bars-solid.svg" height="20px">
+        </label>
+        
+            <img src="../img/logo.PNG" alt="" class="logo">
+        
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/catalogo.html">Catálogo</a></li>
+            <li><a href="../pages/pagos.html">Pagos</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas</a></li>
+            <li><a class="active" href="../pages/privacidad.html">Privacidad</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>
+            <li><a href="../pages/login.html">Portal</a></li>
+          </ul>
+        <!-- los elementos del menu seran enlaces a algun sitio web externo de supermercados o en este caso a un sitio web de pintura-->
+    </nav>
+    <div class="contenido-privacidad">
+        <h2>Política de Privacidad</h2>
+        <p>En Stars - Tienda y Escuela de Arte, nos tomamos muy en serio la protección de tus datos personales. Por esta razón, hemos creado esta política de tratamiento y privacidad de datos personales para informarte cómo recopilamos, usamos, almacenamos y protegemos tu información personal.</p>
+        <h2>Recopilación de datos personales</h2>
+        <p>Los datos personales que recopilamos son utilizados exclusivamente para procesar tus pedidos y envíos. Esto incluye tu nombre, dirección de correo electrónico, dirección de envío y número de teléfono. También recopilamos información de pago, como tu número de tarjeta de crédito o débito, a través de una conexión segura y encriptada.</p>
+        <h2>Uso de datos personales</h2>
+        <p>Utilizamos tus datos personales exclusivamente para procesar tus pedidos y envíos. No compartimos, vendemos ni distribuimos tu información a terceros. Solo se permite el acceso a tus datos personales a nuestro equipo interno de atención al cliente y a nuestros proveedores de servicios de envío, quienes también están sujetos a nuestra política de privacidad.</p>
+        <h2>Almacenamiento de datos personales</h2>
+        <p>Mantenemos tus datos personales almacenados en un servidor seguro y encriptado. Solo se accede a tus datos personales cuando es necesario para procesar tus pedidos y envíos. No conservamos tus datos personales por más tiempo del necesario para completar tus pedidos y envíos.</p>
+
+        <h2>Derechos de privacidad</h2>
+        <p>Tienes derecho a solicitar una copia de la información personal que tenemos sobre ti y a solicitar que corrijamos cualquier información incorrecta o desactualizada. También puedes solicitar que eliminemos tus datos personales de nuestro sistema en cualquier momento. Para ejercer estos derechos, contáctanos a través de nuestro correo electrónico de atención al cliente.</p>
+        <p>En resumen, en Stars - Tienda y Escuela de Arte, nos comprometemos a proteger tus datos personales y solo utilizamos tu información para procesar tus pedidos y envíos. Nunca compartiremos, venderemos ni distribuiremos tu información a terceros. Si tienes alguna pregunta o inquietud sobre nuestra política de tratamiento y privacidad de datos personales, no dudes en ponerte en contacto con nuestro equipo de atención al cliente.</p>
+    </div>
+
+    <footer>
+        <div class="container-subir">
+        <a href="#barra-menu" class="btn-mas">⬆</a></div>
+
+        <div class="listas-footer">
+            <div id="lista1" class="footer-logo">
+                <ul>
+                    <li><img src="../img/logo.PNG" alt="" class="logo"></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista2" class="footer-secciones">
+                <h2><label>Secciones</label></h2>
+                <ul>
+                    <li><a href="../index.html" class="footer-enlace">Inicio</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Catalogo</a></li>
+                    <li><a href="../pages/pagos.html" class="footer-enlace">Pagos</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista3" class="footer-pinturas">
+                <h2><label>Pinturas</label></h2>
+                <ul>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Ultimas Pinturas</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Creaciones del Taller</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Ver todas</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista4" class="footer-nosotros">
+                <h2><label>Nosotros</label></h2>
+                <ul>
+                    <li><a href="../pages/preguntas.html" class="footer-enlace">Preguntas Frecuentes</a></li>
+                    <li><a href="../pages/privacidad.html" class="footer-enlace">Política de Privacidad</a></li>
+                    <li><a href="../pages/contacto.html" class="footer-enlace">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div id="lista5" class="footer-siganos">
+            </div>
+        </div>
+        <hr>
+        <div class="final">
+            <h6>© 2023 Stars - Tienda y escuela de arte. Todos los derechos reservados. | Este es sitio es una creación de Marlon Calderón.</h4>
+            <h6><a href="../pages/privacidad.html">Política de Privacidad</a></h4>
+            <h6><a href="../pages/preguntas.html">Preguntas Frecuentes</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4276">Ley 527 de 1999</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44306">Ley 1480 de 2011</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">Ley 1581 de 2012</a></h4>
+        </div> 
+</footer>
+</body>
+</html>

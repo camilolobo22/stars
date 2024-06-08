@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Perfil</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+</head>
+<body>
+    <h1>Eliminar Perfil</h1>
+    <form action="#" th:action="@{/perfil/web/eliminar/{id}(id=${perfil.id})}" method="post">
+        <p>¿Estás seguro de que deseas eliminar el perfil <strong th:text="${perfil.nombre}"></strong>?</p>
+        <div>
+            <button type="submit">Eliminar</button>
+            <button type="button" th:onclick="|location.href='@{/perfil/web/listar}'|">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>

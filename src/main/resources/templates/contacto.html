@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8"/>
+    <TITLE>Inicio - Portal de Arte - Programación Web</TITLE>
+    <link rel="stylesheet" href="../styles/contacto.css">
+    <link rel="icon" href="../icons/inicio.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animista/1.0.1/animista.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">
+    <style>
+    header{
+    background-image: url("../img/portal.png");
+    background-position:center;
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+:root{
+    --color-1:#222831;
+    --color-2:#393E46;
+    --color-3:#D65A31;
+    --color-2:#EEEEEE;
+}
+
+body{
+    width: 100%;
+}
+
+nav{
+    background: #D65A31;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 2px 50px;
+}
+.logo{
+    height: 75px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #222831;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #EEEEEE;
+    transition: .9s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+.container-subir{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container-subir a{
+    display: block;
+    text-decoration: none;
+    color: var(--color-2);
+    background: var(--color-3);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.container-subir a:hover{
+    background: var(--color-1);
+    color: var(--color-3);
+}
+
+
+footer{
+    background-color: var(--color-3);
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+}
+
+.listas-footer {
+    display: flex;
+}
+
+.listas-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lista1,#lista2,#lista3,#lista4,#lista5{
+    padding: 10px;
+}
+
+.listas-footer a{
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.final{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.final a{
+    color: var(--color-1);
+}
+
+.final a:hover{
+    background: var(--color-2);
+    color: var(--color-1);
+}
+
+.final h6{
+    padding: 13px;
+    color: var(--color-1);
+}
+
+ * {
+     font-family: "Poppins", sans-serif;
+ }
+ 
+ 
+ .Contacto {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     background: #e9f0fc;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .container {
+     width: 85%;
+     margin-top: 2%;
+     margin-bottom: 2%;
+     max-width: 880px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ 
+ .container .left-side {
+     width: 25%;
+     height: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     position: relative;
+ }
+ 
+ .left-side::before{
+     content: "";
+     background: #afafaf;
+     width: 2px;
+     height: 70%;
+     position: absolute;
+     top: 10%;
+     right: -15px;
+ }
+ 
+ .left-side .details {
+     margin: 14px;
+     text-align: center;
+     max-width: 200px;
+ }
+ 
+ .left-side .details i {
+     font-size: 30px;
+     color: var(--color-3);
+     margin-bottom: 10px;
+ }
+ .left-side p, .left-side h3{
+     margin: 0;
+ }
+ 
+ .container .right-side{
+     width: 75%;
+     margin-left: 75px;
+ }
+ .right-side .title{
+     font-size: 28px;
+     font-weight: 600;
+     color: var(--color-3);
+ }
+ .right-side .input-box{
+     height: 50px;
+     width: 100%;
+     border: solid 1px #0004;
+     outline: none;
+     font-size: 16px;
+     padding: 8px 15px;
+     margin: 12px 0;
+     resize: none;
+ }
+ .right-side .massage-box{min-height: 110px;}
+ .right-side .button{
+     color: #fff;
+     display: inline-block;
+     font-size: 18px;
+     outline: none;
+     border: none;
+     padding: 8px 16px;
+     margin-top: 14px;
+     background: var(--color-3);
+     cursor: pointer;
+ }
+ 
+ 
+ @media screen and (max-width:880px) {
+     .container{
+         flex-direction: column-reverse;
+     }
+     .container .left-side ,
+     .container .right-side{
+         width: 100%;
+         margin: 60px 0;
+     }
+     .left-side::before{display: none;}
+ }
+
+ .acerca img{
+    display: block;
+    width: 400px;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 10px solid #fff;
+ }
+
+ .text-acerca{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    align-content: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ .text-acerca h2{
+    color: var(--color-3);
+ }
+
+ .text-acerca p{
+    color: var(--color-1);
+    padding-top: 10px;
+    padding-left: 10px;
+ }
+
+ .acerca {
+    padding: 200px;
+    background-image: url(../img/background-textura.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  .animado {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes slideInDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .animado:nth-of-type(1) {
+    animation-name: slideInDown;
+  }
+  
+  .animado:nth-of-type(2) {
+    animation-name: fadeIn;
+  }
+  
+    </style>
+</head>
+<body>
+    <nav id="barra-menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img src= "../svg/bars-solid.svg" height="20px">
+        </label>
+        
+            <img src="../img/logo.PNG" alt="" class="logo">
+        
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/catalogo.html">Catálogo</a></li>
+            <li><a href="../pages/pagos.html">Pagos</a></li>
+            <li><a href="../pages/preguntas.html">Preguntas</a></li>
+            <li><a href="../pages/privacidad.html">Privacidad</a></li>
+            <li><a class="active" href="../pages/contacto.html">Contacto</a></li>
+            <li><a href="../pages/login.html">Portal</a></li>
+          </ul>
+        <!-- los elementos del menu seran enlaces a algun sitio web externo de supermercados o en este caso a un sitio web de pintura-->
+        </nav>
+
+        <section class="acerca">
+            <img src="../img/acerca.jpg" alt="Imagen de contacto" class="animado">
+            <div class="text-acerca">
+                <h2 class="animado">Acerca de nosotros</h2>
+                <p class="animado">Somos una tienda y escuela de arte en Bucaramanga, donde los estudiantes pueden expresarse artisticamente en el lienzo.</p>
+                <p class="animado">Contamos con pinturas para vender, cursos a los que puedes inscribirte y sus respectivos kits de implementos</p>
+            </div>
+          </section>
+          
+          
+    <div class="Contacto">
+    <div class="container">
+        <div class="left-side">
+            <div class="address details">
+                <i></i>
+                <h3>Ubicación</h3>
+                <p>Nos ubicamos solo en bucaramanga</p>
+            </div>
+            <div class="phone details">
+                <i></i>
+                <h3>Telefono:</h3>
+                <p>+57 300307575</p>
+            </div>
+            <div class="email details">
+                <i></i>
+                <h3>Correo electrónico</h3>
+                <p>stars.art@gmail.com</p>
+            </div>
+        </div>
+        <div class="right-side">
+            <h2 class="title">Envianos un mensaje!</h2>
+            <p>Si tienes alguna duda sobre nuestro trabajo, inquietud o problema con la plataforma.</p>
+            <form action="#" method="get">
+                <input type="text" class="input-box" placeholder="Ingresa tu nombre">
+                <input type="text" class="input-box" placeholder="Ingresa tu Email">
+                <textarea class="input-box massage-box" name="" id="" cols="30" rows="10" placeholder="Enter your Massage"> </textarea>
+                <input class="button" type="button" value="Enviar!">
+            </form>
+        </div>
+    </div></div>
+
+    <footer>
+        <div class="container-subir">
+        <a href="#barra-menu" class="btn-mas">⬆</a></div>
+
+        <div class="listas-footer">
+            <div id="lista1" class="footer-logo">
+                <ul>
+                    <li><img src="../img/logo.PNG" alt="" class="logo"></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista2" class="footer-secciones">
+                <h2><label>Secciones</label></h2>
+                <ul>
+                    <li><a href="../index.html" class="footer-enlace">Inicio</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Catalogo</a></li>
+                    <li><a href="../pages/pagos.html" class="footer-enlace">Pagos</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista3" class="footer-pinturas">
+                <h2><label>Pinturas</label></h2>
+                <ul>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Ultimas Pinturas</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Creaciones del Taller</a></li>
+                    <li><a href="../pages/catalogo.html" class="footer-enlace">Ver todas</a></li>
+                </ul>
+            </div>
+            <hr>
+            <div id="lista4" class="footer-nosotros">
+                <h2><label>Nosotros</label></h2>
+                <ul>
+                    <li><a href="../pages/preguntas.html" class="footer-enlace">Preguntas Frecuentes</a></li>
+                    <li><a href="../pages/privacidad.html" class="footer-enlace">Política de Privacidad</a></li>
+                    <li><a href="../pages/contacto.html" class="footer-enlace">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div id="lista5" class="footer-siganos">
+            </div>
+        </div>
+        <hr>
+        <div class="final">
+            <h6>© 2023 Stars - Tienda y escuela de arte. Todos los derechos reservados. | Este es sitio es una creación de Marlon Calderón.</h4>
+            <h6><a href="../pages/privacidad.html">Política de Privacidad</a></h4>
+            <h6><a href="../pages/preguntas.html">Preguntas Frecuentes</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4276">Ley 527 de 1999</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44306">Ley 1480 de 2011</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">Ley 1581 de 2012</a></h4>
+        </div> 
+</footer>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Usuarios</title>
+  <!-- Estilos Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+     body {
+            background-image: url('../img/portal.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            heigth: auto;
+        }
+
+nav{
+    background: #D65A31;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 2px 50px;
+}
+.logo{
+    height: 75px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #222831;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #EEEEEE;
+    transition: .9s;
+}
+
+.card-header {
+    background-color: #D65A31 !important;
+}
+</style>
+<body>
+<nav id="barra-menu" class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../img/logo.PNG" alt="" class="logo">
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <button class="button_list">
+        <a th:href="@{/coordinadores/}" style="color: aliceblue; text-decoration: none;">
+            <span style="font-size: 120%; padding-left: 5px; padding-right: 5px;">Cursos</span>
+        </a>
+        </li>
+        <li class="nav-item">
+          <a href="/"  class="nav-link btn btn-outline-danger" type="submit">Salir</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-4 mb-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h1 class="card-title mt-3">Lista de Estudiantes</h1>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#crearUsuarioModal">Crear Usuario</button>
+      <div class="table-responsive">
+        <table class="table table-bordered"> <!-- Eliminamos la clase table-sm y ajustamos el ancho de las columnas -->
+          <thead class="table-dark">
+            <tr>
+              <th style="width: 10%;">Tipo de Documento</th>
+              <th style="width: 10%;">Número de Documento</th>
+              <th style="width: 10%;">Primer Apellido</th>
+              <th style="width: 10%;">Segundo Apellido</th>
+              <th style="width: 10%;">Primer Nombre</th>
+              <th style="width: 10%;">Segundo Nombre</th>
+              <th style="width: 10%;">Email</th>
+              <th style="width: 10%;">Password</th>
+              <th style="width: 10%;">Número Telefónico</th>
+              <th style="width: 10%;">Estado En Plataforma</th>
+              <th style="width: 5%;">Acciones Usuario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="usuario : ${usuarios}">
+              <td th:text="${usuario.tipoDocumento}"></td>
+              <td th:text="${usuario.numeroDocumento}"></td>
+              <td th:text="${usuario.primerApellido}"></td>
+              <td th:text="${usuario.segundoApellido}"></td>
+              <td th:text="${usuario.primerNombre}"></td>
+              <td th:text="${usuario.segundoNombre}"></td>
+              <td th:text="${usuario.email}"></td>
+              <td th:text="${usuario.password}"></td>
+              <td th:text="${usuario.numeroTelefonico}"></td>
+              <td th:text="${usuario.estado}"></td>
+              <td>
+                <a class="btn btn-primary btn-sm mb-2" th:href="@{'/user/editar/' + ${usuario.id}}" title="Editar">Editar</a>
+                <a class="btn btn-danger btn-sm" th:href="@{'/usuarios/delete/' + ${usuario.id}}" title="Eliminar">Eliminar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal para crear usuario -->
+<div class="modal fade" id="crearUsuarioModal" tabindex="-1" aria-labelledby="crearUsuarioModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="crearUsuarioModalLabel">Crear Usuario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Aquí va el formulario de creación de usuario -->
+        <form id="crearUsuarioForm">
+          <div class="mb-3">
+            <label for="primerNombre" class="form-label">Primer Nombre:</label>
+            <input type="text" class="form-control" id="primerNombre" name="primerNombre" placeholder="Primer Nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="segundoNombre" class="form-label">Segundo Nombre:</label>
+            <input type="text" class="form-control" id="segundoNombre" name="segundoNombre" placeholder="Segundo Nombre">
+          </div>
+          <div class="mb-3">
+            <label for="primerApellido" class="form-label">Primer Apellido:</label>
+            <input type="text" class="form-control" id="primerApellido" name="primerApellido" placeholder="Primer Apellido" required>
+          </div>
+          <div class="mb-3">
+            <label for="segundoApellido" class="form-label">Segundo Apellido:</label>
+            <input type="text" class="form-control" id="segundoApellido" name="segundoApellido" placeholder="Segundo Apellido">
+          </div>
+          <div class="mb-3">
+            <label for="tipoDocumento" class="form-label">Tipo de Documento:</label>
+            <select class="form-select" id="tipoDocumento" name="tipoDocumento" required>
+              <option value="">Seleccionar</option>
+              <option value="Cedula">Cédula</option>
+              <option value="Tarjeta Identidad">Tarjeta Identidad</option>
+              <option value="Pasaporte">Pasaporte</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="numeroDocumento" class="form-label">Número de Documento:</label>
+            <input type="text" class="form-control" id="numeroDocumento" name="numeroDocumento" placeholder="Número de Documento" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Correo Electrónico" required>
+          </div>
+          <div class="mb-3">
+            <label for="numeroTelefonico" class="form-label">Número de Teléfono:</label>
+            <input type="text" class="form-control" id="numeroTelefonico" name="numeroTelefonico" placeholder="Número de Teléfono">
+          </div>
+          <div class="mb-3">
+            <label for="estado" class="form-label">Estado:</label>
+            <select class="form-select" id="estado" name="estado" required>
+              <option value="">Seleccionar</option>
+              <option value="Activo">Activo</option>
+              <option value="Anulado">Anulado</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-primary" onclick="guardarUsuario()">Guardar Usuario</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  function guardarUsuario() {
+    var formData = {
+      primerNombre: document.getElementById("primerNombre").value,
+      segundoNombre: document.getElementById("segundoNombre").value,
+      primerApellido: document.getElementById("primerApellido").value,
+      segundoApellido: document.getElementById("segundoApellido").value,
+      tipoDocumento: document.getElementById("tipoDocumento").value,
+      numeroDocumento: document.getElementById("numeroDocumento").value,
+      email: document.getElementById("email").value,
+      numeroTelefonico: document.getElementById("numeroTelefonico").value,
+      estado: document.getElementById("estado").value,
+      password: document.getElementById("password").value,
+    };
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "/usuarios/students");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          alert("Usuario creado exitosamente");
+          window.location.href = "/user/listar";
+        } else {
+          alert("Error al crear usuario");
+          // Aquí puedes manejar el error de alguna manera si es necesario
+        }
+      }
+    };
+    xhr.send(JSON.stringify(formData));
+  }
+</script>
+
+<!-- Scripts Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

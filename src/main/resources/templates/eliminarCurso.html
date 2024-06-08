@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Curso</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}" />
+</head>
+<body>
+    <h1>Eliminar Curso</h1>
+    <form action="#" th:action="@{/cursos/web/eliminar/{id}(id=${curso.id})}" method="post">
+        <p>¿Estás seguro de que deseas eliminar el curso <strong th:text="${curso.nombre}"></strong>?</p>
+        <div>
+            <button type="submit">Eliminar</button>
+            <button type="button" th:onclick="|location.href='@{/cursos/web/listar}'|">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>

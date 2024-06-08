@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html><head>
+
+    <meta charset="utf-8"/>
+    <TITLE>Inicio - Portal de Arte - Programación Web</TITLE>
+    
+    <link rel="icon" href="./icons/inicio.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animista/1.0.1/animista.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;700&display=swap" rel="stylesheet">
+	<script src="./javascript/index.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale-1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    
+    
+</head>
+
+<body><div id="contenedor">
+    <header>
+        <a th:href="@{/login}">
+            <div class="header-texto">
+                <h1><b><label>Portal virtual</label></b></h1>
+            <p><label>¡Registrate Ahora y comparte!</label></p>
+            </div></a>
+    </header>
+
+    <nav id="barra-menu">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <img src= "svg/bars-solid.svg" height="20px">
+        </label>
+        
+            <img src="./img/logo.PNG" alt="" class="logo">
+        
+        <ul>
+            <li><a class="active" th:href="@{/home-general}">Inicio</a></li>
+            <li><a th:href="@{/catalogo}">Catálogo</a></li>
+            <li><a th:href="@{/pagos}">Pagos</a></li>
+            <li><a th:href="@{/preguntas}">Preguntas</a></li>
+            <li><a th:href="@{/privacidad}">Privacidad</a></li>
+            <li><a th:href="@{/contacto}">Contacto</a></li>
+            <li><a th:href="@{/login}">Portal</a></li>
+          </ul>
+        <!-- los elementos del menu seran enlaces a algun sitio web externo de supermercados o en este caso a un sitio web de pintura-->
+    </nav>
+
+    <div id="contenido">
+        <main>
+            <article id="primeraimagen">
+                <h2 class="texto1-promocion"><label>Taller de pintura pintura al oleo</label></h2>
+                <h2 class="texto2-promocion"><label>Descuentos hasta 30%</label></h2>
+                <p class="texto3-promocion"><label>¡Aprovecha el mes de descuento para aprender el gran arte de pintar!</label></p>
+                <a href="#descuentos" class="conoce-mas">¡Conoce más!</a>
+            
+            </article>
+
+            <div class="fade-up" id="introduccion">
+                <div class="prest"><h2>¿Qué es Stars.art?</h2>
+                    <p > Es una web de compra de arte, cursos y utensilios guiados a la pintura clásica y moderna. Contamos con estudiantes amateurs, maestros dedicados y comprometidos. Aquí podrás comprar pinturas de todo tipo y tema. Siempre y cuando te guste podrás comprarla de una manera fácil y rápida.</p>
+                    <h4>Porque creemos que una imagen vale más que mil palabras, navega por nuestra web y conoce algunos proyectos interesantes!</h4>
+                </div>
+                <img src="./img/pinceladas-modificado.jpg">
+            </div>
+            <div class="pinturas" id="pinturas">
+                <div class="text-destacaloco">
+                    Pinturas Destacadas
+                    
+                </div>
+                <h4>Algunas pinturas destacadas del ultimo mes.</h4>
+                        <div class="imagenes-des">
+                            <img src="./img/Pintura1.jpg">
+                            <img src="./img/Pintura2.jpg">
+                            <img src="./img/pintura vaqueros.jpeg">
+                            <img src="./img/Pintura5.jpg">
+                            <img src="./img/Pintura6.jpg">
+                        </div>  
+            </div>
+
+            
+        </main>
+        <aside>
+            <div id="recomendados">
+                <div class="tabla-servicios" id="descuentos">
+                    <label><h1>Recomendados del Mes de Mayo</h1></label>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="3"><label>Descuentos de inscripción!</label></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th><label>Plan Básico</label></th>
+                                <td><label>Taller de Pintura al Oleo en tematica abstracta</label></td>
+                                <td><label><p>Antes $90.000/mes <br> <b>Ahora $72.000/mes</b></p></label></td>
+                            </tr>
+                            <tr>
+                                <th><label>Plan Intermedio</label></th>
+                                <td><label>Taller de Pintura Oleo y Acuarelas enfocada en el realismo.</label></td>
+                                <td><label><p>Antes $140.000/mes <br> <b>Ahora $98.000/mes</b></p></label></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3"><label>*Descuentos vigentes por todo el mes de mayo.</label></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button class="boton-anaranjado"><a href="./pages/catalogo.html">¡Ver el catálogo ahora!</a></button>
+
+                </div>
+            </div>
+            <div id="escribenos">
+
+            </div>
+        </aside>
+        
+
+    </div>
+
+    <footer>
+        <div class="container-subir">
+        <a href="#contenedor" class="btn-mas">⬆</a></div>
+
+        <div class="listas-footer">
+            <div id="lista1" class="footer-logo">
+                <ul>
+                    <li><img src="./img/logo.PNG" alt="" class="logo"></li>
+                </ul>
+            </div>
+<hr>
+            <div id="lista2" class="footer-secciones">
+                <h2><label>Secciones</label></h2>
+                <ul>
+                    <li><a href="#" class="footer-enlace">Inicio</a></li>
+                    <li><a href="./pages/catalogo.html" class="footer-enlace">Catalogo</a></li>
+                    <li><a href="./pages/pagos.html" class="footer-enlace">Pagos</a></li>
+                </ul>
+            </div>
+<hr>
+            <div id="lista3" class="footer-pinturas">
+                <h2><label>Pinturas</label></h2>
+                <ul>
+                    <li><a href="#" class="footer-enlace">Ultimas Pinturas</a></li>
+                    <li><a href="#" class="footer-enlace">Creaciones del Taller</a></li>
+                    <li><a href="./pages/catalogo.html" class="footer-enlace">Ver todas</a></li>
+                </ul>
+            </div>
+<hr>
+            <div id="lista4" class="footer-nosotros">
+                <h2><label>Nosotros</label></h2>
+                <ul>
+                    <li><a href="./pages/preguntas.html" class="footer-enlace">Preguntas Frecuentes</a></li>
+                    <li><a href="./pages/privacidad.html" class="footer-enlace">Política de Privacidad</a></li>
+                    <li><a href="./pages/contacto.html" class="footer-enlace">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div id="lista5" class="footer-siganos">
+            </div>
+        </div>
+        <hr>
+        <div class="final">
+            <h6>© 2023 Stars - Tienda y escuela de arte. Todos los derechos reservados. | Este es sitio es una creación de Marlon Calderón.</h4>
+            <h6><a href="./pages/privacidad.html">Política de Privacidad</a></h4>
+            <h6><a href="./pages/preguntas.html">Preguntas Frecuentes</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4276">Ley 527 de 1999</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44306">Ley 1480 de 2011</a></h4>
+            <h6><a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">Ley 1581 de 2012</a></h4>
+        </div> 
+</footer></div>
+</body>
+</html>
