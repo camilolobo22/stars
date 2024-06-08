@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Crear Informe</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+
+        body {
+
+            background-image: url('https://www.uao.edu.co/wp-content/uploads/2021/06/talleres-saber-pro-uao-2021.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            heigth: auto;
+        }
+
+
+    </style>
+<body>
+<div class="container mt-5 ">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        Crear Informe
+      </div>
+      <div class="card-body">
+        <form action="#" th:action="@{/informepuntaje/guardarInforme}" th:object="${informe}" method="post">
+          <div class="form-group">
+            <label >Número de Registro</label>
+            <input type="text" class="form-control" th:field="*{numeroRegistro}" placeholder="Número de Registro">
+          </div>
+          <div class="form-group">
+            <label >Resultado Comunicación Escrita</label>
+            <input type="number" class="form-control" th:field="*{resultadoComunicacion}" placeholder="Resultado Comunicación">
+          </div>
+          <div class="form-group">
+            <label >Resultado Razonamiento Cuantitativo</label>
+            <input type="number" class="form-control" th:field="*{resultadoRazonamiento}" placeholder="Resultado Razonamiento">
+          </div>
+          <div class="form-group">
+            <label >Resultado Lectura Crítica</label>
+            <input type="number" class="form-control" th:field="*{resultadoLectura}" placeholder="Resultado Lectura">
+          </div>
+          <div class="form-group">
+            <label >Resultado Competencias Ciudadanas</label>
+            <input type="number" class="form-control" th:field="*{resultadoCiudadanas}" placeholder="Resultado Ciudadanas">
+          </div>
+          <div class="form-group">
+            <label >Resultado Inglés</label>
+            <input type="number" class="form-control" th:field="*{resultadoIngles}" placeholder="Resultado Inglés">
+          </div>
+          <div class="form-group">
+            <label >Resultado  de Proyectos</label>
+            <input type="number" class="form-control" th:field="*{resultadoFormulacion}" placeholder="Resultado Formulación">
+          </div>
+          <div class="form-group">
+            <label >Resultado Pensamiento Cientifico</label>
+            <input type="number" class="form-control" th:field="*{resultadoPensamiento}" placeholder="Resultado Pensamiento">
+          </div>
+          <div class="form-group">
+            <label >Resultado Diseño de Software </label>
+            <input type="number" class="form-control" th:field="*{resultadoSoftware}" placeholder="Resultado Software">
+          </div>
+          <div class="form-group">
+            <label >Resultado Inglés</label>
+            <select class="form-control" th:field="*{nivelIngles}">
+              <option value="">Seleccionar nivel de inglés</option>
+              <option value="A0">A0</option>
+              <option value="A1">A1</option>
+              <option value="A2">A2</option>
+              <option value="B1">B1</option>
+              <option value="B2">B2</option>
+              <option value="C1">C1</option>
+              <option value="C2">C2</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label >Resultado Total</label>
+            <input type="number" class="form-control" th:field="*{resultadoTotal}" placeholder="Resultado Total">
+          </div>
+          <div class="form-group">
+            <label >ID de Usuario</label>
+            <input type="text" class="form-control" th:field="*{idUser}" placeholder="ID de Usuario" readonly>
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+      </div>
+  </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>
+
+

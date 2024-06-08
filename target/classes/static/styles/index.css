@@ -1,0 +1,649 @@
+header{
+    background-image: url("../img/portal.png");
+    background-position:center;
+    background-size: cover;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+:root{
+    --color-1:#222831;
+    --color-2:#393E46;
+    --color-3:#D65A31;
+    --color-2:#EEEEEE;
+}
+
+body{
+    width: 100%;
+}
+
+.conoce-mas{
+    width: 200px;
+    background: var(--color-3);
+    color: var(--color-2);
+    text-decoration: none;
+    padding: 20px 30px;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+
+.jello-vertical{animation:jello-vertical .9s linear both} @keyframes jello-vertical{0%{transform:scale3d(1,1,1)}30%{transform:scale3d(.75,1.25,1)}40%{transform:scale3d(1.25,.75,1)}50%{transform:scale3d(.85,1.15,1)}65%{transform:scale3d(1.05,.95,1)}75%{transform:scale3d(.95,1.05,1)}100%{transform:scale3d(1,1,1)}}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-up 1s forwards;
+  }
+  
+  @keyframes fade-up {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+#introduccion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    background-color: #f8f8f8;
+    padding: 60px;
+}
+
+#introduccion .prest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    padding: 40px;
+}
+
+#introduccion h4{
+    padding-top: 50px;
+}
+
+#introduccion h2{
+    color: var(--color-3);
+    font-size: 50px;
+}
+
+#introduccion img{
+    width: 100%;
+    max-width: 400px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.boton-anaranjado {
+    background-color: var(--color-3);
+    padding: 10px 20px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .boton-anaranjado:hover {
+    background-color: var(--color-2);
+    color: var(--color-3);
+  }
+  
+  .boton-anaranjado a{
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--color-1);
+  }
+
+  
+#introduccion p{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.conoce-mas:hover{
+    background: var(--color-2);
+    color: var(--color-1)
+}
+
+.text-destacaloco{
+    background: url(../img/text-loco.png);
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.text-destacaloco{
+    font-size: 50px;
+    
+}
+
+.imagenes-des{
+    display: flex;
+    width: 1200px;
+    height: 630px;
+}
+
+.imagenes-des img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.imagenes-des img:hover{
+    cursor: pointer;
+    width: 400px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.pinturas a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 240px;
+    background: var(--color-3);
+    color: var(--color-2);
+    text-decoration: none;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.pinturas a:hover{
+    background: var(--color-3);
+    color:#2c3e50;
+}
+
+header .header-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-size: 30px;
+    color:darkgrey;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    font-family: 'Urbanist', sans-serif;
+}
+
+.tabla-servicios, .pinturas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.pinturas h1,.siguenos h1, .tabla-servicios h1{
+   color:var(--color-3); 
+   font-size: 50px;
+}
+
+.tabla-servicios table,.pinturas table{
+    background: white;
+    text-align: center;
+    border-collapse: collapse;
+    width: 60%;
+}
+.tabla-servicios th,td,.pinturas th,td{
+    padding: 20px;
+}
+
+.tabla-servicios thead{
+    background-color: #D65A31;
+    color: #EEEEEE;
+    border-bottom:  solid 5px black;
+}
+
+.tabla-servicios tr:hover td{
+    background-color: var(--color-2);
+    color: var(--color-3);
+}
+
+nav{
+    background: #D65A31;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 2px 50px;
+}
+.logo{
+    height: 75px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #222831;
+    font-size: 15px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #EEEEEE;
+    transition: .9s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(../img/header.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+
+#primeraimagen{
+    background: url(../img/promoción.jpg) no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: calc(100vh - 80px);
+    width: 99.5%;
+    position: relative;
+    transition: all 0.9s ease-in-out;
+}
+
+#primeraimagen:hover{
+    transform: scale(1.01);
+    box-shadow: 3px 5px 7px;
+}
+
+#primeraimagen .texto1-promocion{
+    font-size: 30px;
+    color: #EEEEEE;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#primeraimagen .texto2-promocion{
+    font-size: 85px;
+    color:white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#primeraimagen .texto3-promocion{
+    font-size: 30px;
+    color:white;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+#recomendados{
+    margin-bottom: 70px;
+}
+
+.siguenos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.siguenos .siguenos-logos img{
+    width: 100px;
+    margin: 20px;
+}
+
+.siguenos h1{
+    background-image: url(../img/header.jpg);
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.seccion-formulario{
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-position: right;
+    width: auto;
+    height: 1000px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario{
+    width: 400px;
+    background: #242322;
+    padding: 40px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 14px 37px #242322;
+}
+
+#texto-nombre,#texto-apellido,#texto-email,#texto-telefono{
+    width: 100%;
+    background-color: #242322;
+    padding: 4px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-size: 13px;
+    color: aliceblue;
+}
+
+#Mensaje{
+    width: 100%;
+    height: 100px;
+    background-color: #242322;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid white;
+    font-size: 13px;
+    color: aliceblue;
+}
+
+.formulario p{
+    margin-top: 10px;
+}
+
+.formulario fieldset{
+    padding: 10px;
+    border: none;
+    padding: 5px;
+}
+
+.formulario legend{
+    color:var(--color-2);
+    border-bottom: 1px solid var(--color-3);
+    margin-bottom: 4px;
+}
+
+.formulario textarea{
+    resize: none;
+}
+
+.container-subir{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container-subir a{
+    display: block;
+    text-decoration: none;
+    color: var(--color-2);
+    background: var(--color-3);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+
+.container-subir a:hover{
+    background: var(--color-1);
+    color: var(--color-3);
+}
+
+.texto-mensaje, .textos{
+    color:var(--color-2)
+}
+
+
+.texto-final a{
+    text-decoration: none;
+    color:var(--color-3);
+}
+
+.sexo-formulario, .tipo-contacto{
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.sexo-formulario h4, .tipo-contacto h4{
+    color: var(--color-3);
+    padding-right: 5px;
+}
+
+
+.sexo-formulario label, .tipo-contacto label{
+    padding-left: 5px;
+}
+
+.sexo-formulario input, .tipo-contacto input{
+    padding-left: 5px;
+}
+
+.texto-final{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.boton-enviar{
+    width: 100%;
+    background-color: var(--color-3);
+    border: none;
+    padding: 8px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+.formulario h3{
+    color:var(--color-3);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer{
+    background-color: var(--color-3);
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+}
+
+.listas-footer {
+    display: flex;
+}
+
+.listas-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#lista1,#lista2,#lista3,#lista4,#lista5{
+    padding: 10px;
+}
+
+.listas-footer a{
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+.final{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.final a{
+    color: var(--color-1);
+}
+
+.final a:hover{
+    background: var(--color-2);
+    color: var(--color-1);
+}
+
+.final h6{
+    padding: 13px;
+    color: var(--color-1);
+}
+
+@media (max-width: 1200px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1040px){
+    #primeraimagen{
+        position:static;
+    }
+    .checkbtn{
+        display:inline-flex;
+    }
+    ul{
+        position: fixed;
+        width: 20%;
+        height: 700px;
+        background: var(--color-3);
+        top: 80px;
+        left: -100%;
+        text-align: left;
+        transition: all .5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: var(--color-2);
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+@media (max-width: 1650px){
+    #primeraimagen .texto2-promocion{
+        font-size: 65px;
+    }
+    #primeraimagen .texto3-promocion{
+        font-size: 20px;
+    }
+    .pinturas a {
+        font-size: 20px;
+        padding: 10px 70px;
+    }
+}
+
+@media (max-width: 1300px){
+    #primeraimagen .texto1-promocion{
+        font-size: 23px;
+    }
+    #primeraimagen .texto2-promocion{
+        font-size: 53px;
+    }
+    #primeraimagen .texto3-promocion{
+        font-size: 18px;
+    }
+    .pinturas a {
+        padding: 10px 21px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1058px){
+    #primeraimagen .texto1-promocion{
+        font-size: 20px;
+    }
+    #primeraimagen .texto2-promocion{
+        font-size: 48px;
+    }
+    #primeraimagen .texto3-promocion{
+        font-size: 15px;
+    }
+}

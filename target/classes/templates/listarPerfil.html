@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Perfil</title>
+    <link rel="stylesheet" type="text/css" href="/styles/cursos.css" />
+    
+    <style>
+    
+    </style>
+</head>
+<body>
+    <nav id="barra-menu">
+			<ul>
+				<li><a th:href="@{/login}">Cerrar Sesion</a></li>
+			</ul>
+		</nav>
+	
+    <h1>Lista de Perfiles</h1>
+    <div style="text-align: center;">
+        <a href="#" th:href="@{/perfil/web/crear}">Crear Nuevo Perfil</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>NombreUsuario</th>
+                <th>Contraseña</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="perfil : ${perfil}">
+                <td th:text="${perfil.nombre}">Nombre </td>
+                <td th:text="${perfil.apellido}">Apellido </td>
+                <td th:text="${perfil.correoElectronico}">Correo Electronico</td>
+                <td th:text="${perfil.nombreUsuario}">NombreUsuario</td>
+                <td th:text="${curso.contraseña}">Contraseña</td>
+                <td>
+                    <a href="#" th:href="@{/perfil/web/editar/{id}(id=${perfil.id})}">Editar</a>
+                    <a href="#" th:href="@{/perfil/web/eliminar/{id}(id=${perfil.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

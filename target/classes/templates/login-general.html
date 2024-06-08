@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Login</title>
+  <meta charset="UTF-8"/>
+  <!-- Incluir Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/styles/login.css">
+  
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../img/portal.png') no-repeat center center fixed;
+            background-size: cover;
+            animation: slideBackground 60s linear infinite;
+        }
+
+        @keyframes slideBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 50% 50%;
+            }
+        }
+
+        .container {
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 100px auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+
+        hr {
+            border: 2px solid #004899;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #007bff;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .toggle-login {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .toggle-login a {
+            color: #333;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+  
+</head>
+<body>
+	<div id="contenedor">
+
+		<nav id="barra-menu">
+			<input type="checkbox" id="check"> <label for="check"
+				class="checkbtn"> <img src="../svg/bars-solid.svg"
+				height="20px">
+			</label> <a href="#contenedor" class="enlace"> <img src="../img/logo.PNG"
+				alt="" class="logo">
+			</a>
+			<ul>
+				<li><a href="../home-general.html">Inicio</a></li>
+				<li><a href="../pages/catalogo.html">Catálogo</a></li>
+				<li><a href="../pagos.html">Pagos</a></li>
+				<li><a href="../pages/preguntas.html">Preguntas</a></li>
+				<li><a href="../pages/privacidad.html">Privacidad</a></li>
+				<li><a href="../pages/contacto.html">Contacto</a></li>
+				<li><a class="active" href="../pages/login.html">Portal</a></li>
+			</ul>
+		</nav>
+
+
+		<div class="container">
+			<header>Inicio de Sesión</header>
+        <hr>
+        <form action="/estudiantes/ingresar" method="post">
+            <input type="text" id="numeroDocumento" name="numeroDocumento" placeholder="Documento" required>
+            <input type="text" id="numeroRegistro" name="numeroRegistro" placeholder="Número de registro" required>
+            <input type="submit" value="Ingresar">
+        </form>
+        <div class="toggle-login">
+            <a href="#" onclick="toggleForm('login')">Ingresar como Coordinador</a>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;">
+        <header>Inicio de Sesión (Coordinador)</header>
+        <hr>
+        <form action="/coordinadores/ingresar" method="post">
+            <input type="text" id="user" name="user" placeholder="Usuario" required>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            <input type="submit" value="Ingresar">
+        </form>
+        <div class="toggle-login">
+            <a href="#" onclick="toggleForm('signup')">Ingresar como Estudiante</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(formType) {
+            if (formType === 'login') {
+                document.querySelectorAll('.container')[0].style.display = 'none';
+                document.querySelectorAll('.container')[1].style.display = 'block';
+            } else if (formType === 'signup') {
+                document.querySelectorAll('.container')[1].style.display = 'none';
+                document.querySelectorAll('.container')[0].style.display = 'block';
+            }
+        }
+    </script>
+
+
+
+		<footer>
+			<div class="container-subir">
+				<a href="#barra-menu" class="btn-mas">⬆</a>
+			</div>
+
+			<div class="listas-footer">
+				<div id="lista1" class="footer-logo">
+					<ul>
+						<li><img src="../img/logo.PNG" alt="" class="logo"></li>
+					</ul>
+				</div>
+				<hr>
+				<div id="lista2" class="footer-secciones">
+					<h2>
+						<label>Secciones</label>
+					</h2>
+					<ul>
+						<li><a href="../index.html" class="footer-enlace">Inicio</a></li>
+						<li><a href="../pages/catalogo.html" class="footer-enlace">Catalogo</a></li>
+						<li><a href="../pages/pagos.html" class="footer-enlace">Pagos</a></li>
+					</ul>
+				</div>
+				<hr>
+				<div id="lista3" class="footer-pinturas">
+					<h2>
+						<label>Pinturas</label>
+					</h2>
+					<ul>
+						<li><a href="../pages/catalogo.html" class="footer-enlace">Ultimas
+								Pinturas</a></li>
+						<li><a href="../pages/catalogo.html" class="footer-enlace">Creaciones
+								del Taller</a></li>
+						<li><a href="../pages/catalogo.html" class="footer-enlace">Ver
+								todas</a></li>
+					</ul>
+				</div>
+				<hr>
+				<div id="lista4" class="footer-nosotros">
+					<h2>
+						<label>Nosotros</label>
+					</h2>
+					<ul>
+						<li><a href="../pages/preguntas.html" class="footer-enlace">Preguntas
+								Frecuentes</a></li>
+						<li><a href="../pages/privacidad.html" class="footer-enlace">Política
+								de Privacidad</a></li>
+						<li><a href="../pages/contacto.html" class="footer-enlace">Contacto</a></li>
+					</ul>
+				</div>
+
+				<div id="lista5" class="footer-siganos"></div>
+			</div>
+			<hr>
+			<div class="final">
+				<h6>
+					© 2023 Stars - Tienda y escuela de arte. Todos los derechos
+					reservados. | Este es sitio es una creación de Marlon Calderón.
+					</h4>
+					<h6>
+						<a href="../pages/privacidad.html">Política de Privacidad</a>
+						</h4>
+						<h6>
+							<a href="../pages/preguntas.html">Preguntas Frecuentes</a>
+							</h4>
+							<h6>
+								<a
+									href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=4276">Ley
+									527 de 1999</a>
+								</h4>
+								<h6>
+									<a
+										href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=44306">Ley
+										1480 de 2011</a>
+									</h4>
+									<h6>
+										<a
+											href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981">Ley
+											1581 de 2012</a>
+										</h4>
+			</div>
+		</footer>
+
+
+	</div>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

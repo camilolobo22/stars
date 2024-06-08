@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Cursos</title>
+    <link rel="stylesheet" type="text/css" href="/styles/cursos.css" />
+    
+    <style>
+    
+    </style>
+</head>
+<body>
+    <nav id="barra-menu">
+			<ul>
+				<li><a th:href="@{/login}">Cerrar Sesion</a></li>
+			</ul>
+		</nav>
+	
+    <h1>Lista de Cursos</h1>
+    <div style="text-align: center;">
+        <a href="#" th:href="@{/cursos/web/crear}">Crear Nuevo Curso</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="curso : ${cursos}">
+                <td th:text="${curso.nombre}">Nombre del Curso</td>
+                <td th:text="${curso.descripcion}">Descripción del Curso</td>
+                <td>
+                    <a href="#" th:href="@{/cursos/web/editar/{id}(id=${curso.id})}">Editar</a>
+                    <a href="#" th:href="@{/cursos/web/eliminar/{id}(id=${curso.id})}">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

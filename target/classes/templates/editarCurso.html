@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Curso</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/styles/cursos.css}" />
+</head>
+<body>
+    <h1>Editar Curso</h1>
+    <form action="#" th:action="@{/cursos/web/editar/{id}(id=${curso.id})}" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" th:value="${curso.nombre}" />
+        </div>
+        <div>
+            <label for="descripcion">Descripción:</label>
+            <input type="text" id="descripcion" name="descripcion" th:value="${curso.descripcion}" />
+        </div>
+        <!-- Agrega más campos según los atributos de tu entidad Curso -->
+        <div>
+            <button type="submit">Actualizar</button>
+            <button type="button" th:onclick="|location.href='@{/cursos/web/listar}'|">Cancelar</button>
+        </div>
+    </form>
+</body>
+</html>
